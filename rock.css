@@ -1,0 +1,48 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 500px;
+  margin-top: 100px;
+}
+
+.Img {
+  height: 50px;
+  width: 50px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 3px solid white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: white;
+  border: 3px solid red;
+}
+
+.res {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.btnReset {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 40px;
+  margin-top: 40px;
+}
+
+.upd {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
