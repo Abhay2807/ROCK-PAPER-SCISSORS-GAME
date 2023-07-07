@@ -48,10 +48,16 @@
           score.ties=0;
           localStorage.removeItem('ScoreCard');
           updateScore();
+          resetText();
         
         /* alert(`ScoreCard Is now Reset:\n
       Wins:${score.wins} , Losses:${score.losses}, Ties:${score.ties}`);*/
       ">Reset score</button>
+
+      <button class="auto"
+        onclick="autoPlay();">
+        Auto Play
+      </button>
 
 
     <script src="JS FILES/base.js">

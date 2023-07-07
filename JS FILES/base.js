@@ -104,4 +104,33 @@ Wins:${score.wins} , Losses:${score.losses}, Ties:${score.ties}`;
         .innerHTML=`You ${result}`;
       }
 
+      function resetText()
+      {
+        document.querySelector('.js-result')
+        .innerHTML=``;
+        document.querySelector('.js-moves')
+        .innerHTML=``;
+      }
+
+      let isAutoPlaying=false;
+      let intervalId;
+
+      function autoPlay()
+      { if(isAutoPlaying === false){
+        intervalId=setInterval( function() {
+          const move=pickComputerMove();
+          playGame(move);
+        }, 1000);
+        isAutoPlaying=true;
+
+      }
+      else
+      {
+        clearInterval(intervalId);
+        isAutoPlaying=false;
+      }
+      }
+
+
+
       
