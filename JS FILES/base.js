@@ -131,6 +131,27 @@ Wins:${score.wins} , Losses:${score.losses}, Ties:${score.ties}`;
       }
       }
 
+      document.body.addEventListener('keydown',(event)=>
+      {
+        // alert("KeyPressed!!!");
+        // console.log(event.key); //-->(Which key pressed on keyboard!)
+
+        if(event.key === 'r' || event.key === 'R')
+        {
+          playGame('rock');
+        }
+        else if(event.key === 'p' || event.key === 'P')
+        {
+          playGame('paper');
+        }
+        else if(event.key === 's' || event.key === 'S')
+        {
+          playGame('scissors');
+        }
+
+  
+      });
+
 
 
       
