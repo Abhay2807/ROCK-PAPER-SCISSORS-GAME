@@ -41,23 +41,14 @@
       <pre class="score-update upd"></pre>
       
 
-      <button class="btnReset"
-      onclick="
-          score.wins=0;
-          score.losses=0;
-          score.ties=0;
-          localStorage.removeItem('ScoreCard');
-          updateScore();
-          resetText();
-        
-        /* alert(`ScoreCard Is now Reset:\n
-      Wins:${score.wins} , Losses:${score.losses}, Ties:${score.ties}`);*/
-      ">Reset score</button>
+      <button class="btnReset">Reset score</button>
 
-      <button class="auto"
-        onclick="autoPlay();">
+      <button class="auto">
         Auto Play
       </button>
+
+      <p class="reset-below-js">
+      </p>
 
 
     <script src="JS FILES/base.js">

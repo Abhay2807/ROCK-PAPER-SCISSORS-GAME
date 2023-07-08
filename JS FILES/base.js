@@ -115,6 +115,12 @@ Wins:${score.wins} , Losses:${score.losses}, Ties:${score.ties}`;
       let isAutoPlaying=false;
       let intervalId;
 
+      document.querySelector('.auto').addEventListener('click',
+      ()=> {
+        autoPlay();
+      });
+
+
       function autoPlay()
       { if(isAutoPlaying === false){
         intervalId=setInterval( function() {
@@ -122,19 +128,21 @@ Wins:${score.wins} , Losses:${score.losses}, Ties:${score.ties}`;
           playGame(move);
         }, 1000);
         isAutoPlaying=true;
+        document.querySelector('.auto').innerHTML='Stop Auto Playing';
 
       }
       else
       {
         clearInterval(intervalId);
         isAutoPlaying=false;
+        document.querySelector('.auto').innerHTML="Auto Play";
       }
       }
 
       document.body.addEventListener('keydown',(event)=>
       {
         // alert("KeyPressed!!!");
-        // console.log(event.key); //-->(Which key pressed on keyboard!)
+        //console.log(event.key); //-->(Which key pressed on keyboard!)
 
         if(event.key === 'r' || event.key === 'R')
         {
@@ -149,8 +157,66 @@ Wins:${score.wins} , Losses:${score.losses}, Ties:${score.ties}`;
           playGame('scissors');
         }
 
+        else if(event.key ==='a' || event.key==='A')
+        { 
+          autoPlay();
+        }
+
+        else if(event.key === 'Backspace')
+        { checkPop();
+        }
+
+        
+
   
+      }
+      );
+
+      document.querySelector('.btnReset').addEventListener('click',
+      ()=>
+      {   checkPop();
       });
+
+      function resetScorecard()
+      {
+          score.wins=0;
+          score.losses=0;
+          score.ties=0;
+          localStorage.removeItem('ScoreCard');
+          updateScore();
+          resetText();
+      }
+
+      function checkPop()
+      { 
+        document.querySelector('.reset-below-js').innerHTML=
+        `
+        <p>
+          Are you sure you want to reset the score?
+        <button class="yes-js yes">Yes</button>
+        <button class="no-js no">No</button>
+        </p>
+        `;
+
+        document.querySelector('.yes-js').addEventListener('click',
+        ()=> {
+          resetScorecard();
+          document.querySelector('.reset-below-js').innerHTML='';
+  
+        });
+
+        document.querySelector('.no-js').addEventListener('click',
+        ()=> {
+          document.querySelector('.reset-below-js').innerHTML='';
+          
+  
+        });
+
+
+
+      }
+
+     
 
 
 
