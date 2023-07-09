@@ -1,7 +1,9 @@
 # ROCK-PAPER-SCISSORS-GAME (RPS GAME)
 
-Classical RPS Game 
-Created using HTML, CSS & JavaScript
+Classical RPS (ROCK-PAPER-SCISSORS) Game.
+Created using HTML, CSS & JavaScript.
+It allows the user to play the game either manually or using auto-play feature.
+User can also control the game using keyboard control.
 
 Website hosted on Github , Link : https://abhay2807.github.io/ROCK-PAPER-SCISSORS-GAME/
 
